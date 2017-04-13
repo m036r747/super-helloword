@@ -1,0 +1,24 @@
+def fibonacho():
+    fibList[0] = fibList[1]
+    for i in range(2, nthNumber):
+        numba = fibList[0] + fibList[1]
+        fibList[0] = fibList[1]
+        fibList[1] = numba
+
+print("""Hey, kids! Today we will be constructing a Fibonacci sequence.
+A what? Y'know: 0, 1, 1, 2, 3, 5, 8, 13, ..., and so on.
+What can this program do for you? That's a great question.
+This program allows you to find the nth number in a Fibonacci sequence.""")
+
+nthNumber = int(input("What number in the fibonacci sequence would you like to see? "))
+
+fibList = [0, 1]
+
+if nthNumber == 0:
+    print("The answer: {0}".format(fibList[0]))
+elif nthNumber == 1:
+    print("The answer: {0}".format(fibList[1]))
+elif nthNumber > 1:
+    fibonacho()
+
+    print("The answer is: {0}".format(fibList[1]))
